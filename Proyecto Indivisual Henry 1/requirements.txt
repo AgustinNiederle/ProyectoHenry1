@@ -1,0 +1,15 @@
+﻿matplotlib
+matplotlib-inline
+nltk
+numpy
+pandas
+pydantic
+pydantic_core
+scikit-learn
+scipy
+uvicorn
+wordcloud
+fastapi
+pyarrow
+
+
