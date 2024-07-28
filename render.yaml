@@ -2,6 +2,8 @@ services:
   - type: web
     name: my-fastapi-app
     env: python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: |
+      apt-get update && apt-get install -y build-essential python3-dev
+      pip install -r requirements.txt
     startCommand: "uvicorn main:app --host 0.0.0.0 --port 8000"
-    runtime: python3.8
+    runtime: python3.10
