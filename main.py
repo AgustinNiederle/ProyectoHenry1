@@ -11,7 +11,7 @@ nltk.download('stopwords')
 app = FastAPI()
 
 
-df = pd.read_parquet(r'df_reducido_prueba.parquet')
+df = pd.read_parquet('./df_reducido_prueba.parquet')
 df = pd.DataFrame(df)
 df['overviews'] = df['overview'].fillna('')
 
@@ -109,7 +109,7 @@ def get_fecha(dia: str):
 
 @app.get("/score_titulo/{titulo}")
 def score_titulo(titulo: str):
-    df = pd.read_parquet(r'df_reducido_prueba.parquet')
+    df = pd.read_parquet('./df_reducido_prueba.parquet')
     
     # Filtrar el DataFrame por el título
     filtered_df = df[df['title'] == titulo]
@@ -126,7 +126,7 @@ def score_titulo(titulo: str):
 
 @app.get("/titulo_del_film/{titulo}")
 def titulo_del_film(titulo: str):
-    df = pd.read_parquet(r'df_reducido_prueba.parquet')
+    df = pd.read_parquet('./df_reducido_prueba.parquet')
       
     filtered_df = df[df['title'] == titulo]
     
@@ -149,7 +149,7 @@ def titulo_del_film(titulo: str):
 
 @app.get("/actor_actriz/{nombre_actor_actriz}")
 def get_actor(nombre_actor_actriz: str):
-    df = pd.read_parquet(r'df_reducido_prueba.parquet')
+    df = pd.read_parquet('./df_reducido_prueba.parquet')
     
     filtered_df = df[df['Cast'].str.contains(nombre_actor_actriz, case=False, na=False)]
     
@@ -168,7 +168,7 @@ def get_actor(nombre_actor_actriz: str):
     
 @app.get("/nombre_director_a/{nombre_director_a}")
 def get_director(nombre_director_a: str):
-    df = pd.read_parquet(r'df_reducido_prueba.parquet')
+    df = pd.read_parquet('./df_reducido_prueba.parquet')
     
     filtered_df = df[df['Directed by'].str.contains(nombre_director_a, case=False, na=False)]
     
