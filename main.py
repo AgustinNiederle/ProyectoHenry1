@@ -10,6 +10,9 @@ nltk.download('stopwords')
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"Hola, Henrys": "Bienvenidos al proyecto de Agustín Niederle"}
 
 df = pd.read_parquet('./df_reducido_prueba.parquet')
 df = pd.DataFrame(df)
