@@ -49,6 +49,7 @@ Metodología
 Se utilizaron técnicas de análisis exploratorio de datos para identificar patrones y tendencias en los datos de ventas. Se aplicaron modelos de aprendizaje automático, como regresión lineal y árboles de decisión, para predecir las ventas futuras. También se realizaron análisis de segmentación de clientes y optimización de estrategias de marketing.
 
 Resultados y Conclusiones
+Según el set de datos orotgado, no he podido concluir qué tipo de problema podría resolver en base a la información y las mediciones obtenidas. He podido, sin embargo, entender el proceso del cine a lo largo de los primeros cien años desde que se inventó. Cómo la industria fue creciendo de manera exponencial hasta el año 2016, cuando comenzaron a aparecer las series OnDemand en las plataformas. Además, los datos antes del COVID ya presentan valores que no pueden ser representativos a la realidad. Por ejemplo, tener la misma cantidad de  estrenos que en 1920, por ejemplo, me hicieron sospechar de la veracidad de los mismos. Al constatar en bases de datos oficiales, confirmé que desde el año 2017 en adelante los números corresponientes a la cantidad de estrenos por mes (release date) no resultan representativos a la realidad. Esto no puedo saber a qué se debe, desafortunadamente.    
 
 Autores:
 Este proyecto fue realizado por: Agu Nieder (Agustin Niederle)
