@@ -1,21 +1,11 @@
 # ProyectoHenry1
 Proyecto individual 1 Henry Cohorte PT09
 
-Estructura y Organización: Divide el README en secciones claras y lógicas, como Introducción, Instalación, Uso, Metodología, Resultados, Contribución, etc. Esto ayuda a los usuarios a encontrar rápidamente la información que necesitan.
-
-Lenguaje Claro y Conciso: Utiliza un lenguaje sencillo y evita jerga técnica innecesaria. Procura ser lo más conciso posible sin omitir detalles importantes.
-
-Instrucciones Detalladas: Proporciona instrucciones paso a paso para instalar, configurar y ejecutar el proyecto. Incluye requisitos, comandos y ejemplos de uso.
-
-Contextualización y Motivación: Explica el problema que aborda el proyecto, su objetivo y las principales características o funcionalidades. Esto ayuda a los usuarios a comprender el propósito del proyecto.
-
-Metodología y Análisis: Describe las técnicas y algoritmos utilizados, las fuentes de datos y cualquier otra información relevante sobre la implementación del proyecto.
-
-Resultados y Conclusiones: Presenta los hallazgos clave, las métricas de rendimiento y las principales conclusiones obtenidas a partir del proyecto.
-
+Contextualización y Motivación: 
+En este trabajo se busca realizar un MVP para poder montar una API y deployarla en Render, usando un data set con columnas anidadas, valores repetidos, altas proporcion de NAN o en formatos inadecuados. Se buscará utilizar métodos de limpieza y carga de datos (ETL), para poder entender el valor de los mismos con un EDA, lograr algun insight útil para finalmente crear un modelo con Machine Learning para implementar un sistema de recomendación de películas al estilo de las plataformas de contenido.
 
 Descripción
-Este proyecto tiene como objetivo analizar los datos de ventas de una tienda de ropa para identificar patrones, tendencias y oportunidades de mejora. Utilizando técnicas de ciencia de datos, se busca generar información valiosa que ayude a la toma de decisiones estratégicas para mejorar el rendimiento de la tienda.
+Este proyecto tiene como objetivo analizar los datos de un dataset con datos de largometrajes internacionales a lo largo de los 100 primeros años de la industria. Podemos entender cómo crece la cantidad de estrnenos por año, el comportamiento de la popularidad en función de los géneros y el efecto que tuvieron las plataformas de contenido y la pandemia en la actividad económica del cine.
 
 Requisitos:
 Python 3.10 
@@ -47,21 +37,18 @@ reports/: Guarda los informes y visualizaciones generados.
 README.md: Archivo de documentación del proyecto.
 
 Uso y Ejecución
-Para ejecutar el análisis de ventas, abrir el notebook ventas_analisis.ipynb en la carpeta notebooks/.
-El notebook guiará a través de las diferentes etapas del análisis, incluyendo carga de datos, visualizaciones y modelado.
-Para generar un informe de ventas, ejecutar el script generate_report.py en la carpeta src/.
+Para ejecutar el análisis EDA, abrir el notebook EDA.ipynb en la carpeta EDA.
+El notebook guiará a través de las diferentes etapas del análisis, incluyendo carga de datos, visualizaciones y una nube de palabras para entender mejor.
+
+Para entender cómo se generaron los endpoints que se pueden aplicar en FastAPI y/o Render, abrir el script main.py.
+
 Datos y Fuentes
-Los datos utilizados en este proyecto provienen de la base de datos interna de la tienda de ropa. Los datos incluyen información sobre ventas, clientes, inventario y promociones. Los archivos de datos se encuentran en la carpeta data/ en formato CSV.
+Los datos utilizados en este proyecto provienen de la base de datos otorgada por Henry para este período de examen. Los datos incluyen más de 18 columnas de las cuáles resultaron útiles son útiles la mitad, sobre todo "release_date" de donde se pudo obtener la cantidad de estrenos a lo largo de los años. También tenemos  el overview, que es una sinopsis corta, más taglines (frases de venta). Estas dos fueron combinadas para generar el set de palabras con el que si hizo la nube de palabras y luego para aplicar el modelo de recomendación que funciona el método Similitud del Coseno.
 
 Metodología
 Se utilizaron técnicas de análisis exploratorio de datos para identificar patrones y tendencias en los datos de ventas. Se aplicaron modelos de aprendizaje automático, como regresión lineal y árboles de decisión, para predecir las ventas futuras. También se realizaron análisis de segmentación de clientes y optimización de estrategias de marketing.
 
 Resultados y Conclusiones
-El análisis de ventas reveló un aumento significativo en las ventas durante los meses de verano y temporada navideña.
-Se identificaron los productos más y menos vendidos, lo que permitirá ajustar el inventario y las estrategias de merchandising.
-El modelo de predicción de ventas alcanzó una precisión del 85%, lo que ayudará a la planificación y toma de decisiones.
-Contribución y Colaboración
-Los contribuidores son bienvenidos a reportar problemas, enviar solicitudes de funciones o enviar pull requests en el repositorio de GitHub. Antes de contribuir, por favor revisa las pautas de contribución en el archivo CONTRIBUTING.md.
 
 Autores:
-Este proyecto fue realizado por: Mariana Gigena . (Se puede incluir Linkedin o mail para que los contacten)
+Este proyecto fue realizado por: Agu Nieder (Agustin Niederle)
